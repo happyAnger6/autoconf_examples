@@ -105,7 +105,7 @@ am__v_AR_0 = @echo "  AR      " $@;
 am__v_AR_1 = 
 libswap_a_AR = $(AR) $(ARFLAGS)
 libswap_a_LIBADD =
-am_libswap_a_OBJECTS = swap.$(OBJEXT)
+am_libswap_a_OBJECTS = swap.$(OBJEXT) debug.$(OBJEXT)
 libswap_a_OBJECTS = $(am_libswap_a_OBJECTS)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -253,7 +253,7 @@ top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
 noinst_LIBRARIES = libswap.a
-libswap_a_SOURCES = swap.c
+libswap_a_SOURCES = swap.c debug.c
 INCLUDES = -I$(top_srcdir)/src/include
 all: all-am
 
@@ -303,6 +303,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/debug.Po
 include ./$(DEPDIR)/swap.Po
 
 .c.o:

@@ -8,6 +8,7 @@ int main()
 	int a = 5,b =10;
 	swap(&a, &b);
 	printf("a=[%d] b=[%d]\r\n",a,b);
+	debug("aaa");
 	return 0;
 }
 
